@@ -3,3 +3,7 @@ routerAdd("GET", "/hello/:name", (c) => {
 
   return c.json(200, { message: "Hello " + name });
 });
+
+cronAdd("hello", "*/2 * * * *", () => {
+  console.log("Hello!");
+});
